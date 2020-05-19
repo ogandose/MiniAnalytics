@@ -1,0 +1,5 @@
+CREATE TABLE mentions (
+    id UUID NOT NULL PRIMARY KEY,
+    username VARCHAR(1000) NOT NULL,
+    snippet VARCHAR(1000) NOT NULL
+)
