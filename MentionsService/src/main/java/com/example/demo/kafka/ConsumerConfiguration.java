@@ -3,6 +3,7 @@ package com.example.demo.kafka;
 import com.example.demo.model.Mention;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
@@ -16,7 +17,8 @@ import java.util.Map;
 @Configuration
 public class ConsumerConfiguration {
 
-    private static final String KAFKA_BROKER = "localhost:9092";
+    @Value("${kafka.broker}")
+    private String KAFKA_BROKER = "localhost:9092";
     private static final String GROUP_ID = "kafka-sandbox";
 
     @Bean
