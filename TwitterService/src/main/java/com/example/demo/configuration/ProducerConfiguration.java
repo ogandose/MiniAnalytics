@@ -17,7 +17,7 @@ import java.util.Map;
 @Configuration
 public class ProducerConfiguration {
 
-    @Value("${kafka.broker}")
+    @Value("${kafka.broker:localhost:9092}")
     private String KAFKA_BROKER = "localhost:9092";
 
     @Bean

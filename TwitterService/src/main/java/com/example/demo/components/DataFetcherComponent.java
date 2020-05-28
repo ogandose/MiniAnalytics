@@ -1,6 +1,5 @@
 package com.example.demo.components;
 
-import com.example.demo.controller.KafkaController;
 import com.example.demo.service.ProducerService;
 import com.example.demo.service.TwitterService;
 import org.slf4j.Logger;
